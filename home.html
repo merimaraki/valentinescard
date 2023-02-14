@@ -10,16 +10,21 @@
     background: #f3eed8;
    } 
    .flex-center {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    width: 100%;
     justify-content: center;
     align-items: center; 
-    width:fit-content;
    }
    .card {
+    overflow: visible !important;
+    -webkit-transform-style: preserve-3d;
     background: transparent;
-    width: 700px;
-    height: 300px;
+    width: 600px;
+    height: 400px;
     perspective: 1000px;
+    transform-style: preserve-3d;
    }
    .card-inner {
     position: relative;
@@ -28,13 +33,15 @@
     text-align:center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    perspective: 1000px;
+
    }
 
-   .card:hover .card-inner {
+   .card:hover, .card-inner:hover {
     transform: rotateY(180deg);
    }
 
-   .card-front .card-back {
+   .card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -44,6 +51,7 @@
 
    .card-back{
     transform: rotateY(180deg);
+    background-color: aqua;
    }
 </style>
 
