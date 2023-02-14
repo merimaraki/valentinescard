@@ -3,6 +3,7 @@
 
 <head>
 <title>happy vday<3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <style>
    body {
@@ -56,12 +57,16 @@
     background-color: transparent;
    }
 
+   img {
+    width: 60vw;
+   }
+
    .card-back{
     transform: rotateY(180deg);
    }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (min-width: 600px) {
         img {
-            width: 60vw;
+            width: auto;
             
         }
     }
